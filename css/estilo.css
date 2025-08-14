@@ -18,9 +18,8 @@ body {
   height: 45px;
   border-radius: 10px;
   background: #3baa3b;
-  animation: aparecer 0.5s ease forwards;
+  animation: aparecer 3s;
   transform-origin: center;
-  
 }
 
 .red {
@@ -37,25 +36,26 @@ body {
     transform: scale(1.1);
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
   }
 }
+
 h1 {
   color: white;
   display: flex;
   justify-content: center;
-  opacity: 0;
-  animation: aparecerTexto 2s forwards;
+  animation: aparecerTexto 4s forwards;
   font-family: sans-serif;
-  white-space: nowrap; 
-  padding: 60px            
+  white-space: nowrap;
+  opacity: 0;
+  padding: 60px
 }
 
 @keyframes aparecerTexto {
-  to { opacity: 1; }
-}
-@keyframes aparecer {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
