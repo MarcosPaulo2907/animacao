@@ -6,20 +6,16 @@ body {
   align-items: center;
   font-family: sans-serif;
   background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p1/22286075-em-branco-ondulado-verde-fundo-com-branco-copia-de-espaco-vetor.jpg');
-  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+
 
 }
 
-/* Checkbox hack */
 #toggle {
   display: none;
 }
 
-/* Quadrado no canto */
 .trigger {
-
   position: fixed;
   top: 20px;
   left: 20px;
@@ -36,7 +32,7 @@ body {
   opacity: 0;
 }
 
-/* Container logo */
+
 .container {
   display: none;
   flex-direction: column;
