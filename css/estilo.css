@@ -1,16 +1,15 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #eef2f3;
   color: #333;
-  line-height: 1.6;
 }
 
 #toggle {
   display: none;
 }
+
 .trigger {
   position: fixed;
   top: 20px;
@@ -21,71 +20,59 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.8s ease-in-out;
-  z-index: 1000;
 }
-#toggle:checked + .trigger {
+
+#toggle:checked+.trigger {
   transform: rotate(360deg);
   background: #d93b3b;
 }
-
-
-.site-content {
-  display: block;
+#toggle:checked~.site-content {
+  display: none;
 }
-#toggle:checked ~ .site-content {
-  display: none; 
-}
+
 .site-header {
   background: #006400;
   color: white;
-  padding: 30px 20px;
+  padding: 19px;
   text-align: center;
 }
-.site-header h1 {
-  margin: 0;
-  font-size: 2em;
-}
-.site-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0 0;
-}
+
+
 .site-nav ul li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 10px;
 }
+
 .site-nav ul li a {
   color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
 }
+
 .site-nav ul li a:hover {
   color: #cce5cc;
 }
+
 .site-main {
   padding: 20px;
   max-width: 900px;
   margin: 20px auto;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 .section h2 {
-  border-left: 5px solid #006400;
   padding-left: 10px;
   color: #006400;
   margin-bottom: 10px;
 }
+
 .site-footer {
   text-align: center;
   background: #006400;
   color: white;
   padding: 15px;
-  margin-top: 20px;
+
 }
 
-/* ===== ANIMAÇÃO ===== */
 .container {
   display: none;
   flex-direction: column;
@@ -95,15 +82,18 @@ body {
   text-align: center;
   background: #eef2f3;
 }
-#toggle:checked ~ .logo {
+
+#toggle:checked~.logo {
   display: flex;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 40px);
   grid-template-rows: repeat(7, 40px);
   gap: 6px;
 }
+
 .cubo {
   width: 45px;
   height: 45px;
@@ -111,21 +101,38 @@ body {
   background: #3baa3b;
   animation: aparecer 1s ease forwards;
 }
+
 .red {
   background: #d93b3b;
   border-radius: 70px;
 }
+
 @keyframes aparecer {
-  0% { transform: scale(0); opacity: 0; }
-  80% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
+
 .logo h1 {
   color: black;
   opacity: 0;
   padding: 40px;
   animation: aparecerTexto 3s forwards;
 }
+
 @keyframes aparecerTexto {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
