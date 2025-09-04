@@ -26,6 +26,7 @@ body {
   transform: rotate(360deg);
   background: #d93b3b;
 }
+
 #toggle:checked~.site-content {
   display: none;
 }
@@ -47,10 +48,6 @@ body {
   color: white;
 }
 
-.site-nav ul li a:hover {
-  color: #cce5cc;
-}
-
 .site-main {
   padding: 20px;
   max-width: 900px;
@@ -63,13 +60,14 @@ body {
   padding-left: 10px;
   color: #006400;
   margin-bottom: 10px;
+  padding: 15px;
 }
 
 .site-footer {
   text-align: center;
   background: #006400;
   color: white;
-  padding: 15px;
+  padding: 14px;
 
 }
 
@@ -80,7 +78,6 @@ body {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background: #eef2f3;
 }
 
 #toggle:checked~.logo {
